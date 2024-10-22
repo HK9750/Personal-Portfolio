@@ -1,14 +1,18 @@
 import Image from "next/image";
-import SeachIcon from "../../../public/Shape.svg";
+import SearchIcon from "../../../public/Search.svg";
 
 const Input = () => {
   return (
     <div className="relative">
-      <input type="text" className="border rounded-[24px] p-1" />
+      <input
+        type="text"
+        id="search-input"
+        className="border rounded-[24px] py-2 pl-4 pr-10 w-full focus:outline-none focus:ring-2 focus:ring-brand1"
+      />
       <Image
-        src={SeachIcon}
+        src={SearchIcon}
         alt="Search Icon"
-        className="absolute top-2 right-2"
+        className="absolute top-1/2 right-3 transform -translate-y-1/2 pointer-events-none"
         width={15}
         height={15}
       />
