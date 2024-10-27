@@ -22,5 +22,5 @@ export const Socials = [
 export const Info = [
   { value: "4", label: "Programming Languages" },
   { value: "6", label: "Development Tools" },
-  { value: "8", label: "Years of Experience" },
+  { value: "2", label: "Years of Experience" },
 ];

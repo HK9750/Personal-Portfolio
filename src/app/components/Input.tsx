@@ -1,7 +1,8 @@
 import Image from "next/image";
 import SearchIcon from "../../../public/Search.svg";
+import React from "react";
 
-const Input = () => {
+const Input:React.FC = () => {
   return (
     <div className="relative">
       <input

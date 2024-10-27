@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { Links, Socials } from "../../utils/data";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   return (
     <nav className="flex w-full py-2 px-4 justify-between items-center">
       <div className="flex gap-3 logo-m items-center cursor-pointer hover:scale-105 transition-transform duration-300">

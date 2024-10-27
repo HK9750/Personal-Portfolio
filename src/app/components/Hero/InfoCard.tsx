@@ -5,9 +5,9 @@ const InfoCards: React.FC = () => (
     {Info.map((item, index) => (
       <div
         key={index}
-        className="bg-bg2 p-4 rounded-lg shadow-md text-center w-32"
+        className="bg-bg-2 p-4 rounded-lg shadow-md text-center w-32"
       >
-        <p className="text-4xl text-brand1 font-bold">{item.value}</p>
+        <p className="text-4xl text-brand-1 font-bold">{item.value}</p>
         <p className="text-sm text-grey">{item.label}</p>
       </div>
     ))}
