@@ -33,7 +33,7 @@ const Ball: React.FC<BallProps> = ({ imgUrl }) => {
           rotation={[2 * Math.PI, 0, 6.25]}
           scale={1}
           map={decal}
-          flatShading
+          // flatShading
         />
       </mesh>
     </Float>
@@ -47,12 +47,13 @@ interface BallCanvasProps {
 const BallCanvas: React.FC<BallCanvasProps> = ({ icon }) => {
   return (
     <Canvas
+      style={{ height: 100, width: 100 }}
       frameloop="demand"
       dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} />
+        <OrbitControls enableZoom={false} enablePan={false} />
         <Ball imgUrl={icon} />
       </Suspense>
       <Preload all />
