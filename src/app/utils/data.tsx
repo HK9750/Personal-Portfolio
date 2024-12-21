@@ -1,4 +1,4 @@
-import GitHubLogo from "../../../public/GitHubLogo.svg";
+import GitHubLogo from "../../../public/GithubLogo.svg";
 import LinkedInLogo from "../../../public/LinkedInLogo.svg";
 import { Github, Linkedin, Mail } from "lucide-react";
 
