@@ -2,40 +2,47 @@ import React from "react";
 import Image from "next/image";
 import Button from "../Button";
 import Profile from "../../../../public/Profile.jpg";
-import Website from "../../../../public/Website.svg";
 import Email from "../../../../public/Email.svg";
 import Location from "../../../../public/Location.svg";
 import Work from "../../../../public/Work.svg";
 import Download from "../../../../public/Download.svg";
 
 const ProfileCard: React.FC = () => {
+  const handleDownloadCV = () => {
+    const cvLink = "/HasnainKhanCV.pdf";
+    const link = document.createElement("a");
+    link.href = cvLink;
+    link.download = "HasnainKhanCV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
-    <div className="relative flex flex-col items-center bg-bg-2 p-8 rounded-[30px] shadow-lg w-full lg:w-1/3 border border-brand-1">
-      <div className="absolute -top-10">
+    <div className="bg-bg-2 border border-brand-1 rounded-2xl shadow-lg w-full lg:w-80 flex flex-col items-center p-6 space-y-6 text-center">
+      <div className="relative w-32 h-32 -mt-16">
         <Image
           src={Profile}
           alt="Hasnain's Profile Picture"
-          width={80}
-          height={80}
-          className="object-cover rounded-full border-2 border-brand-1"
+          layout="fill"
+          className="rounded-full border-4 border-brand-1 object-cover"
         />
       </div>
 
-      <div className="mt-14 text-center">
+      <div>
         <h1 className="text-brand-1 text-2xl font-bold">Hasnain Khan</h1>
-        <p className="text-grey text-sm">Full-Stack Developer</p>
+        <p className="text-grey text-sm mt-1">Full-Stack Developer</p>
+      </div>
 
-        <div className="mt-6 text-sm space-y-3">
-          <ContactInfo icon={Email} text="hasnainkhan9750@gmail.com" />
-          <ContactInfo icon={Location} text="Pakistan" />
-          <ContactInfo icon={Work} text="Full-time / Freelancer" />
-          <ContactInfo icon={Website} text="www.hasnainkhan.com" />
-        </div>
+      <div className="space-y-2 text-sm">
+        <ContactInfo icon={Email} text="hasnainkhan9750@gmail.com" />
+        <ContactInfo icon={Location} text="Pakistan" />
+        <ContactInfo icon={Work} text="Full-time / Freelancer" />
       </div>
 
       <Button
-        aria-label="Download CV Button"
-        className="mt-6 flex items-center gap-2"
+        className="flex items-center gap-2 mt-4 px-4 py-2 bg-brand-1 text-gray-900 rounded-md hover:bg-brand-2 transition-all"
+        onClick={handleDownloadCV}
       >
         <span>Download CV</span>
         <Image src={Download} alt="Download CV Icon" width={16} height={16} />
@@ -50,7 +57,7 @@ interface ContactInfoProps {
 }
 
 const ContactInfo: React.FC<ContactInfoProps> = ({ icon, text }) => (
-  <p className="flex items-center gap-2">
+  <p className="flex items-center justify-left gap-2 text-grey">
     <Image src={icon} alt={`${text} Icon`} width={16} height={16} />
     {text}
   </p>

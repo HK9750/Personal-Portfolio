@@ -47,7 +47,7 @@ interface BallCanvasProps {
 const BallCanvas: React.FC<BallCanvasProps> = ({ icon }) => {
   return (
     <Canvas
-      style={{ height: 100, width: 100 }}
+      style={{ height: 70, width: 70 }}
       frameloop="demand"
       dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}

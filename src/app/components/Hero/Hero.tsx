@@ -11,13 +11,14 @@ const Hero: React.FC = () => {
     <section className="h-screen bg-bg1 text-white">
       <Navbar />
       <div className="container mx-auto flex flex-col h-full lg:flex-row items-center justify-between p-10 gap-10">
-        {/* <motion.div
+        <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-        > */}
-        <ProfileCard />
-        {/* </motion.div> */}
+          className="flex justify-center lg:justify-start w-full lg:w-1/3"
+        >
+          <ProfileCard />
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -32,6 +33,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 1 }}
+          className="flex justify-center lg:justify-end w-full lg:w-1/3"
         >
           <InfoCard />
         </motion.div>
