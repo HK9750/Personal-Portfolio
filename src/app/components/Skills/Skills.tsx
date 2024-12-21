@@ -36,17 +36,20 @@ const skillsData = [
 
 const Skills: React.FC = () => {
   return (
-    <section className="bg-bg-1 min-h-screen py-16 flex flex-col items-center justify-center">
-      <div className="container mx-auto text-center px-6">
-        <h2 className="text-3xl text-brand-1 font-bold border-b-4 border-brand-1 inline-block mb-10">
+    <section className="bg-bg-1 min-h-screen py-12 px-4 md:px-8 lg:px-16 flex flex-col items-center justify-center">
+      <div className="container mx-auto text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-brand-1 border-b-4 border-brand-1 inline-block pb-2 mb-8">
           My Skills
         </h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-8">
           {skillsData.map((skill, index) => (
-            <div key={index} className="flex flex-col items-center mt-4">
+            <div
+              key={index}
+              className="flex flex-col items-center justify-center p-4 bg-bg-2 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+            >
               <BallCanvas icon={skill.icon.src} />
-              <p className="mt-4 text-lg font-semibold text-gray-200">
+              <p className="mt-4 text-sm md:text-base font-semibold text-gray-200">
                 {skill.name}
               </p>
             </div>

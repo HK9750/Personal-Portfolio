@@ -20,7 +20,7 @@ const ProfileCard: React.FC = () => {
 
   return (
     <div className="bg-bg-2 border border-brand-1 rounded-2xl shadow-lg w-full lg:w-80 flex flex-col items-center p-6 space-y-6 text-center">
-      <div className="relative w-32 h-32 -mt-16">
+      <div className="relative w-28 h-28 lg:w-32 lg:h-32 -mt-12">
         <Image
           src={Profile}
           alt="Hasnain's Profile Picture"
@@ -30,11 +30,13 @@ const ProfileCard: React.FC = () => {
       </div>
 
       <div>
-        <h1 className="text-brand-1 text-2xl font-bold">Hasnain Khan</h1>
+        <h1 className="text-brand-1 text-xl lg:text-2xl font-bold">
+          Hasnain Khan
+        </h1>
         <p className="text-grey text-sm mt-1">Full-Stack Developer</p>
       </div>
 
-      <div className="space-y-2 text-sm">
+      <div className="space-y-1 text-sm">
         <ContactInfo icon={Email} text="hasnainkhan9750@gmail.com" />
         <ContactInfo icon={Location} text="Pakistan" />
         <ContactInfo icon={Work} text="Full-time / Freelancer" />

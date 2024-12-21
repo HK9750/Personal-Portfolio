@@ -5,15 +5,13 @@ import { Links, Socials } from "../../utils/data";
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="flex w-full py-2 px-6 justify-between items-center">
-      <div className="flex gap-3 logo-m items-center cursor-pointer hover:scale-105 transition-transform duration-300">
-        <h1 className="text-brand-1 transition-colors duration-300">
-          &lt;C/&gt;
-        </h1>
-        <h1 className="transition-colors duration-300">Hasnain Khan</h1>
+    <nav className="flex w-full py-4 px-4 bg-bg-2 lg:px-6 justify-between items-center">
+      <div className="flex gap-2 lg:gap-3 items-center cursor-pointer hover:scale-105 transition-transform duration-300">
+        <h1 className="text-brand-1">&lt;C/&gt;</h1>
+        <h1>Hasnain Khan</h1>
       </div>
 
-      <div className="flex gap-5 flex-grow justify-center">
+      <div className="hidden lg:flex gap-5">
         {Links.map(({ href, name }, index) => (
           <Link href={href} key={index} className="menu-m hover:text-brand-2">
             {name}
@@ -21,14 +19,14 @@ const Navbar: React.FC = () => {
         ))}
       </div>
 
-      <div className="flex gap-5">
+      <div className="flex gap-3 lg:gap-5">
         {Socials.map(({ href, logo, name }, index) => (
           <Link
             href={href}
             key={index}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-2 media-m"
+            className="flex items-center gap-1 lg:gap-2"
           >
             <Image src={logo} alt={name} width={20} height={20} />
             {name}
