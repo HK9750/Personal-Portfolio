@@ -9,10 +9,10 @@ import Download from "../../../../public/Download.svg";
 
 const ProfileCard: React.FC = () => {
   const handleDownloadCV = () => {
-    const cvLink = "/HasnainKhanCV.pdf";
+    const cvLink = "/HasnainMubarakCV.pdf";
     const link = document.createElement("a");
     link.href = cvLink;
-    link.download = "HasnainKhanCV.pdf";
+    link.download = "HasnainMubarakCV.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
